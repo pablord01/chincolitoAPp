@@ -1,0 +1,49 @@
+
+
+<ion-header-bar class="bar-header bar-df ">
+      
+      <div class=" title bar-logo">
+        <img src="img/organo.png">
+      </div>
+    </ion-header-bar>
+    <ion-content  class=" has-footer">
+    <div class="row  notifica-home">
+    <div class="col" style="cursor: pointer;" onclick="window.location='#/tab/solicitud';" >
+      <div class="col-notifica preferencias">
+        <h3 class="numero">Escoge tus Preferencias</h3>
+        <p class="notifica-titulo"><font color="orange"><b>></b></font> ...y sé parte de la Comunidad Planorámica!</p>
+      </div>
+    </div>
+  </div>
+
+    <div >
+            <ion-list>
+                <div class="filter-menu" ng-repeat="group in Filters | orderBy: 'title'">
+                    <ion-item class="item-dark" ng-click="toggleGroup(group)" ng-class="{active: isGroupShown(group)}">
+                        <i class="icon energized" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i> &nbsp; {{group.title}}
+                    </ion-item>
+                  <div class="ion-checkbox-viewport checkbo">
+                    <ion-checkbox ng-repeat="filter in group.filters | orderBy: 'name'" class="item-accordion" value="{{filter.name}}" ng-model="filter.checked" ng-change="ModifyFilter(filter)" ng-show="isGroupShown(group)">
+                        {{filter.name}}
+                    </ion-checkbox>
+                  </div>
+                </div>
+            </ion-list>
+     </div>
+
+    </ion-content>
+    <div class="fixed-outside">
+      	<div class="row">
+           <button  class="button button-block button-naranja-df4 comenzar" ng-click="logout()"  >
+           	<buttom class="item-icon-left" class="icon ion-chevron-right">
+         		 <i class="icon ion-chevron-right"></i>
+     		 </buttom>
+
+           	Comenzar
+           	<buttom class="item-icon-right" class="icon ion-chevron-right">
+         		 <i class="icon ion-chevron-right"></i>
+     		 </buttom>
+           </button>
+        </div>
+    </div>
+      
