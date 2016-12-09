@@ -1,0 +1,92 @@
+<ion-modal-view class="ion-nifty-modal" ng-controller="modal">
+  <div class="ion-modal-content-custom" >
+    <ion-header-bar class="bar-header bar-df">
+      <h1 class="title"><font color="white" size = "4 px">Detalle Panorama</font></h1>
+      <a class="button button-icon icon ion-close icon_custom " ng-click="closeModal1()"></a>
+    </ion-header-bar>
+    <ion-content scroll = "true">
+    
+      <div class="modal">
+           <div  class = "row">
+              <div id="wrapperi" class = "col col-33" >
+                <img ng-src= {{selectedImagen}}>
+              </div>
+              <div id="wrapperi" class = "col" >
+                 <h4 class = "perfect"><b>{{ selectedNombre}}</b></h4>
+            <h4><font size = "4 px" color = "E3B134"><i class="icon ion-android-star"></i><i class="icon ion-android-star"></i><i class="icon ion-android-star"></i><i class="icon ion-android-star"></i><i class="icon ion-android-star-half"> (23)</i><b> </b></h4>
+
+              </div>
+
+           </div>  
+
+           <ion-list>
+           <!-- DESCRIPCION-->
+           <ion-item class="item-darko"
+                    ng-click="toggleGroup(1)"
+                    ng-class="{active: isGroupShown(1)}">
+              <i class="icon" ng-class="isGroupShown(1) ? 'ion-minus' : 'ion-plus'"></i>
+            &nbsp;
+            Descripción
+          </ion-item>
+          
+          <ion-item class="item-accordo item item-text-wrap "
+                    ng-repeat="item in [1]"
+                    ng-show="isGroupShown(1)">
+          <p class= "conde "><font size = "3 px">{{ selectedDetalle }}</font> </p>
+          </ion-item>
+          
+          <!-- Fecha y lugar-->
+          <ion-item class="item-darko"
+                    ng-click="toggleGroup(2)"
+                    ng-class="{active: isGroupShown(2)}">
+              <i class="icon" ng-class="isGroupShown(2) ? 'ion-minus' : 'ion-plus'"></i>
+            &nbsp;
+            Fecha y Lugar
+          </ion-item>         
+          <ion-item class="item-accordo item item-text-wrap"
+                    ng-repeat="item in [1]"
+                    ng-show="isGroupShown(2)">
+            <h4><font size = "4 px" color = "black"><i class="icon ion-android-calendar"></i><b> Fecha:</b></font> <font size= "3 px">{{ selectedFecha }}</font></h4>
+            <h4><font size = "4 px" color = "black"><i class="icon ion-clock"></i><b> Hora: </b></font><font size = "3 px">{{ selectedHora }}</font></h4>
+            <h4><font size = "4 px" color = "black"><i class="icon ion-android-pin"></i><b> Lugar:</b></font> <font size = "3 px">{{ selectedLugar}}</font></h4>
+            
+          </ion-item>
+
+            <!-- DISCIPLEINA-->
+           <ion-item class="item-darko"
+                    ng-click="toggleGroup(3)"
+                    ng-class="{active: isGroupShown(3)}">
+              <i class="icon" ng-class="isGroupShown(3) ? 'ion-minus' : 'ion-plus'"></i>
+            &nbsp;
+            Disciplina
+          </ion-item>
+          <ion-item class="item-accordo"
+                    ng-repeat="item in [1]"
+                    ng-show="isGroupShown(3)">
+
+                    <h4><font size = "4 px" color = "black"><i class="icon ion-happy-outline"></i><b> </b></font> <font size = "4 px">{{ selectedCategory }}</font></h4>
+            
+          </ion-item>
+            <!--DURACION -->
+            <!-- -->
+            <ion-item class="item-darko"
+                    ng-click="toggleGroup(5)"
+                    ng-class="{active: isGroupShown(5)}">
+              <i class="icon" ng-class="isGroupShown(5) ? 'ion-minus' : 'ion-plus'"></i>
+            &nbsp;
+            Precio
+          </ion-item>
+          <ion-item class="item-accordo item item-text-wrap"
+                    ng-repeat="item in [1]"
+                    ng-show="isGroupShown(5)">
+            
+           <h4><font size = "4 px" color = "black"><i class="icon ion-social-usd"></i><b> </b></font><font size = "4 px">{{ selectedPrice }}</font></h4>
+            </ion-item>
+
+       </ion-list>
+
+
+    </div>
+    </ion-content>
+  </div>
+</ion-modal-view>
