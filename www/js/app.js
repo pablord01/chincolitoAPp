@@ -14,7 +14,10 @@ angular.module('starter', ['ionic','ngCordova'])
 })
 
 //ruteo entre los diferentes templates, con sus correspondientes controladores
-.config(function ($stateProvider, $urlRouterProvider) {
+.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+  $ionicConfigProvider.tabs.position('bottom');
+  $ionicConfigProvider.tabs.style('striped');
+
   $stateProvider
   .state('login', {
     url: '/login',
@@ -59,7 +62,15 @@ angular.module('starter', ['ionic','ngCordova'])
         }
       }
     })
-
+    .state('tabs.cercanos', {
+      url: "/cercanos",
+      views: {
+        'cercanos-tab': {
+          templateUrl: "templates/cercanos.html",
+          controller: 'CercanosCtrl'
+        }
+      }
+    })
     .state('tabs.pendientes', {
       url: "/pendientes",
       views: {

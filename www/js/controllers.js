@@ -23,6 +23,12 @@ angular.module('starter')
     AuthService.logout();
     $state.go('login');
   };
+  $scope.cercanos = function() {
+    $state.go('tabs.cercanos', {reload: true});
+  };
+  $scope.ruta = function() {
+    $state.go('tabs.pendientes', {reload: true});
+  };
 })
 
 
@@ -308,7 +314,7 @@ angular.module('starter')
 
 },
 {"nombre": "FIESTA AÑO NUEVO SUN PARTY",
-"imagen": "img/SUN.jpg",
+"imagen": "img/sun.jpg",
 "fecha": "2017/01/1",
 "hora": "00:30 hrs",
 "lugar": "Sun Monticello. Santiago",
@@ -386,6 +392,9 @@ angular.module('starter')
 
 
 .controller('showOffers',function($ionicHistory,  passingData, getData,AuthService,$state, $rootScope, $ionicModal, $ionicPopup, $scope, $ionicLoading){
+})
+
+.controller('CercanosCtrl',function($ionicHistory,  passingData, getData,AuthService,$state, $rootScope, $ionicModal, $ionicPopup, $scope, $ionicLoading){
 })
 
 
@@ -472,7 +481,7 @@ angular.module('starter')
         long : -70.67399740219116 
     }
 ];
-  $scope.init = function() {
+  var init = function() {
         var myLatlng = new google.maps.LatLng(-33.440009606870085, -70.67945301532745);
         var mapOptions = {
             center: myLatlng,
@@ -500,12 +509,6 @@ angular.module('starter')
                 animation: google.maps.Animation.DROP,
                 title: info.name
             });
-
-            /*var information = '<div style="height: 100px;">' +
-                    '<h4>'+info.name+'</h4>' +
-                    '<h5>'+info.desc+'</h5>' +
-                      '<p>'+info.description+'</p>' +
-                  '</div>';*/
             var aux = '<a ng-click="openModal1('+index+')">Detalles</a>';
             var information = $compile(aux)($scope);
             google.maps.event.addListener(marker, 'click', function(){
@@ -517,11 +520,8 @@ angular.module('starter')
         for (i = 0; i < $scope.places.length; i++){
             createMarker($scope.places[i],i);
         }
-
-        // Additional Markers //
         for (var t = 0;
         (t + 1) < lat_lng.length; t++) {
-        //Intialize the Direction Service
         var service = new google.maps.DirectionsService();
         var directionsDisplay = new google.maps.DirectionsRenderer();
 
@@ -535,10 +535,7 @@ angular.module('starter')
             travelMode: google.maps.DirectionsTravelMode.WALKING
           }, function(result, status) {
             if (status == google.maps.DirectionsStatus.OK) {
-              // new path for the next result
               var path = new google.maps.MVCArray();
-              //Set the Path Stroke Color
-              // new polyline for the next result
               var poly = new google.maps.Polyline({
                 map: map,
                 strokeColor: '#E80606'
@@ -555,6 +552,7 @@ angular.module('starter')
       }
 
     };
+    init();
 
     $ionicModal.fromTemplateUrl('templates/modalmapa.html',function($ionicModal) {
       $scope.modal = $ionicModal;
@@ -577,9 +575,154 @@ angular.module('starter')
     $scope.closeModal1 = function() {      
       $scope.modal.hide();
     };
+})
+
+/*
+.controller('CercanosCtrl',function($ionicHistory,$state, $ionicModal, $ionicPopup, $scope, $ionicLoading, $compile){
+    var geocoder;
+    $scope.places = [
+    {
+        id : '1',
+        name : 'El principito',
+        image: 'img/principito.jpg  ',
+        date: '12/12/16 al 21/12/16',
+        hour: '19:00 a 20:30 hrs',
+        place : 'Centro de Eventos Matucana 100',
+        price: '$5.000 Adultos \n $2.500 Niños',
+        category: 'Cultura, Teatro',
+        description: 'Novela clásica escrita por Antoine de Saint-Exupéry llevada al teatro dirigida a toda la familia',
+        lat : -33.44471866212755,
+        long : -70.67959785461426
+    },
+    {
+        id : '2',
+        name : 'Guirnaldas de Luz',
+        image: 'img/artequin.jpg',
+        date: '12/12/16 al 21/12/16',
+        hour: '11:00 a 20:00 hrs',
+        place : 'Museo Interactivo Artequin',
+        price: 'Entrada Liberada',
+        category: 'Museo de Ciencia',
+        description: 'Actividad para toda la familia, en que los niños pueden crear sus propios adornos navideños',
+        lat : -33.44455751997385,
+        long : -70.68420052528381 
+    },
+    {
+        id : '3',
+        name : 'Exposición 40a aniversario',
+        image: 'img/ferro.jpg',
+        date: 'De Martes a Sábado, todo Diciembre',
+        hour: '10:00 a 19:30 hrs',
+        place : 'Museo Ferroviario de Santiago',
+        price: 'Entrada Liberada',
+        category: 'Museo de Historia',
+        description: 'Conmemoración del 40a aniversario del Museo Ferroviario, invitados por confirmar',
+        lat : -33.443250466999814,
+        long : -70.68514466285706 
+    },
+    {
+        id : '4',
+        name : 'Astronomía',
+        image: "img/ciencia.jpg",
+        date: 'De Martes a Sábado',
+        hour: '10:00 a 20:00 hrs',
+        place : 'Museo de Ciencias y tecnología',
+        price: 'Aporte voluntario desde $300',
+        category: 'Museo de Ciencia',
+        description: 'El universo se toma el museo para acercarnos a galaxias lejanas con juegos de luces y proyecciones en vivo',
+        lat : -33.44004541814073,
+        long : -70.68369626998901 
+    },
+    {
+        id : '5',
+        name : 'Defensa, promoción y denuncia',
+        image: 'img/memoria.jpg',
+        date: '12/12/17 al 24/01/17',
+        hour: '18:00 a 20:00 hrs',
+        place : 'Museo de la Memoria y los Derechos Humanos',
+        price: 'Entrada Liberada',
+        category: 'Exposición histórica',
+        description: 'Galeria de fotografías inéditas tomadas en dictadura por fotografos aficionados',
+        lat : -33.440009606870085,
+        long : -70.67945301532745 
+    },
+    {
+        id : '6',
+        name : 'Expo Vegan',
+        image: 'img/yungay.jpg',
+        date: '12/12/16 al 22/12/16',
+        hour: '10:00 a 21:30 hrs',
+        place : 'Plaza Yungay',
+        price: 'Entrada Liberada',
+        category: 'Feria cultural',
+        description: 'Los mejores exponentes de Santiago se reunen en uno de los lugares íconos de la comuna a presentar sus mejores recetas y degustar a la gente con una tarde entretenida en familia',
+        lat : -33.437440109624404,
+        long : -70.67399740219116 
+    }
+];
+  $scope.init1 = function() {
+        var myLatlng = new google.maps.LatLng(-33.440009606870085, -70.67945301532745);
+        var mapOptions = {
+            center: myLatlng,
+            zoom: 14,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        var lat_lng = [];
+
+        for (i = 0; i < $scope.places.length;i++){
+            lat_lng.push(new google.maps.LatLng($scope.places[i].lat, $scope.places[i].long))
+        }
+ 
+        $scope.map = map;
+        $scope.markers = [];
+        var infoWindow = new google.maps.InfoWindow({
+          maxWidth: 200,
+          maxHeight: 100
+        });
+        var createMarker = function (info,index){
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(info.lat, info.long),
+                map: $scope.map,
+                label: info.id,
+                animation: google.maps.Animation.DROP,
+                title: info.name
+            });
+            var aux = '<h4 ng-click="openModal('+index+')">'+info.name+'</h4>';
+            var information = $compile(aux)($scope);
+            google.maps.event.addListener(marker, 'click', function(){
+                infoWindow.setContent(information[0]);
+                infoWindow.open($scope.map, marker);
+            });
+            $scope.markers.push(marker);
+        }  
+        for (i = 0; i < $scope.places.length; i++){
+            createMarker($scope.places[i],i);
+        }
+
+    };    
     ionic.Platform.ready($scope.init); 
-})
 
-.controller('offerDetails',function($ionicHistory,  passingData, getData,AuthService,$state, $rootScope, $ionicModal, $ionicPopup, $scope, $ionicLoading){
 
-})
+    $ionicModal.fromTemplateUrl('templates/modalmapa.html',function($ionicModal) {
+      $scope.modal = $ionicModal;
+      }, {
+        scope: $scope,
+        animation: 'slide-in-up'
+    });
+
+    $scope.openModal = function(index) {
+      $scope.selectedNombre = $scope.places[index].name;
+      $scope.selectedImagen = $scope.places[index].image;
+      $scope.selectedDetalle = $scope.places[index].description;
+      $scope.selectedFecha = $scope.places[index].date;
+      $scope.selectedHora = $scope.places[index].hour;
+      $scope.selectedLugar = $scope.places[index].place;
+      $scope.selectedPrice = $scope.places[index].price;
+      $scope.selectedCategory = $scope.places[index].category;
+      $scope.modal.show();
+    }
+    $scope.closeModal1 = function() {      
+      $scope.modal.hide();
+    };
+})*/
