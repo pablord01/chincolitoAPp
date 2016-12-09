@@ -1,2 +1,47 @@
 <ion-view title="Lugares Cercanos">
+ <ion-header-bar class="bar-header bar-df ">
+      <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+      <div class=" title bar-logo">
+        <img src="img/organo.png">
+      </div>
+      <buttom class="item-icon-right" class="icon ion-help">
+          <i class="icon ion-help"></i>
+      </buttom>
+ </ion-header-bar >
+
+ <div class="bar bar-subheader  item-input-inset">
+        <label class="item-input-wrapper">
+            <i class="icon ion-android-search placeholder-icon larger" ></i>
+            <input type="search" placeholder="Buscar Panorama" ng-model="search.nombre" ng-change="scrollTop()">
+           
+        </label>
+        <button ng-if="search.nombre.length"
+        class="button button-icon ion-close input-button"
+        ng-click="search.nombre = ''">
+      </button>
+    </div>
+    
+
+<ion-content class ="hola">
+ <div class="list" >
+
+        <a ng-repeat="evento in eventos |orderBy: 'fecha' | filter:search" 
+           ng-click="openModal(evento.nombre,evento.imagen,evento.filters,evento.fecha,evento.hora,evento.lugar)"
+           class="item item-thumbnail-left">
+
+          <img src= "{{ evento.imagen }}">
+          <h2><b><font color = "Black">{{ evento.nombre }}</font></b></h2>
+
+          <h4><font size = "2 px"><i class="icon ion-android-calendar"></i><b> Fecha:</b> {{ evento.fecha }} | {{ evento.hora }}</font></h4>
+          <h4><font size = "2 px"><i class="icon ion-android-pin"></i><b> Lugar:</b> {{ evento.lugar }}</font></h4>
+          <h4><font size = "2 px"><i class="icon ion-social-usd"></i><b> Entrada:</b> <font color = "{{evento.color}}"> {{ evento.entrada }}</font></font></h4>
+        </a>
+
+      </div>
+
+</ion-content>
+
+
+
+
 </ion-view>

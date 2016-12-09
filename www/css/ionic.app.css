@@ -14,6 +14,7 @@ $energized:                       #ffc900 !default;
 $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
 $dark:                            #444 !default;
+$darko:                            #fff !default;
 */
 /*!
   Ionicons, v2.0.1
@@ -3508,7 +3509,11 @@ ion-infinite-scroll {
 
 /* If you change these, change platform.scss as well */
 .has-header {
-  top: 44px; }
+  top: 40px; }
+
+.hola{
+  top: 88px;
+}  
 
 .no-header {
   top: 0; }
@@ -3989,6 +3994,7 @@ a.subdued {
       color: #fff; }
     .bar.bar-royal.bar-footer {
       background-image: linear-gradient(180deg, #6b46e5, #6b46e5 50%, transparent 50%); }
+    
   .bar.bar-dark {
     border-color: #111;
     background-color: #444444;
@@ -4040,8 +4046,10 @@ a.subdued {
       font-size: 17px; }
       .bar .button.button-icon .icon:before, .bar .button.button-icon:before, .bar .button.button-icon.icon-left:before, .bar .button.button-icon.icon-right:before, .bar button.button-icon .icon:before, .bar button.button-icon:before, .bar button.button-icon.icon-left:before, .bar button.button-icon.icon-right:before {
         vertical-align: top;
-        font-size: 32px;
-        line-height: 32px; }
+        padding-right: 0;
+         padding-top: 7px;
+        font-size: 30px;
+        line-height: 15px; }
     .bar .button.button-clear, .bar button.button-clear {
       padding-right: 2px;
       padding-left: 2px;
@@ -5786,6 +5794,13 @@ ion-tabs.tabs-striped.tabs-color-active-dark .tab-item.tab-item-active, ion-tabs
     border-color: #111;
     background-color: #444;
     color: #fff; }
+
+    .item.item-darko {
+    border-color: #111;
+    background-color: #f5f5f5;
+    color: #000000; }
+
+
   .item[ng-click]:hover {
     cursor: pointer; }
 
@@ -5945,6 +5960,9 @@ ion-tabs.tabs-striped.tabs-color-active-dark .tab-item.tab-item-active, ion-tabs
   .item .item-content.activated.item-dark {
     border-color: #000;
     background-color: #262626; }
+
+
+
     .item.active.item-dark.item-complex > .item-content,
     .item.activated.item-dark.item-complex > .item-content,
     .item-complex.active .item-content.item-dark.item-complex > .item-content,
@@ -10256,8 +10274,8 @@ margin-top: -17px !important;
 .ion-nifty-modal {
   width: 90%;
   min-height: 0 !important;
-  height: 80%;
-  top: 10%;
+  height: 85%;
+  top: 8%;
   left: 5%;
   right: 5%;
   bottom: 5%;
@@ -10563,20 +10581,22 @@ border: 1px groove;
 
 
 
-.list .item.item-accordion {
+
+
+
+.list .item.item-accordo {
   line-height: 38px;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
   transition: 0.09s all linear;
 }
-.list .item.item-accordion.ng-hide {
+.list .item.item-accordo.ng-hide {
   line-height: 0px;
 }
-.list .item.item-accordion.ng-hide-add,
-.list .item.item-accordion.ng-hide-remove {
+.list .item.item-accordo.ng-hide-add,
+.list .item.item-accordo.ng-hide-remove {
   display: block !important;
 }
-
 .ion-checkbox-viewport {
   max-height: 200px;
   width:100%;
@@ -10592,4 +10612,65 @@ border: 1px groove;
 .checkbo input:checked:before, .checkbox input:checked + .checkbox-icon:before {
   background: #0d9986 !important; 
   border-color: #0d9986 !important;
+}
+
+.item-input-wrapper{
+  width: 50%;
+}
+
+.larger {
+    font-size: 22px;
+}
+
+.button.button-icon.input-button {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  color: #bbb;
+}
+
+.icon_custom {
+  font-size:20px;
+  padding:2px;
+}
+
+#wrapperi{
+  width: 25%;
+  margin-left: 3%;
+}
+#wrapperi img{
+  width: 100%
+    
+}
+
+.perfect{
+  font-size: 20px;
+  font-style: 
+  text-align: center;
+
+}
+
+.list .item.item-accordion {
+  line-height: 38px;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: 0.09s all linear;
+}
+.list .item.item-accordion.ng-hide {
+  line-height: 0px;
+}
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+  display: block !important;
+}
+
+
+
+.conde {
+    margin-bottom: 2px;
+    line-height: 20pt;
+    text-align : justify;
+}
+.bb{
+  padding-top: 2px; 
 }
