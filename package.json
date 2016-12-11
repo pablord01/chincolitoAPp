@@ -1,7 +1,7 @@
 {
-  "name": "ionic-maps",
-  "version": "1.1.1",
-  "description": "ionic-maps: An Ionic project",
+  "name": "Planorama Mobile",
+  "version": "0.0.1",
+  "description": "Un proyecto de Chincolito Labs",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^2.0.4",

@@ -13,7 +13,7 @@
               </div>
               <div id="wrapperi" class = "col" >
                  <h4 class = "perfect"><b>{{ selectedNombre}}</b></h4>
-            <h4><font size = "4 px" color = "E3B134"><i class="icon ion-android-star"></i><i class="icon ion-android-star"></i><i class="icon ion-android-star"></i><i class="icon ion-android-star"></i><i class="icon ion-android-star-half"> (23)</i><b> </b></h4>
+            <h4><font size = "4 px" color = "E3B134"><i class="icon ion-android-star"></i><i class="icon ion-android-star"></i><i class="icon ion-android-star"></i><i class="icon ion-android-star"></i><i class="icon ion-android-star-half"></i></font> (23)<b> </b></h4>
 
               </div>
 
@@ -46,7 +46,7 @@
           <ion-item class="item-accordo item item-text-wrap"
                     ng-repeat="item in [1]"
                     ng-show="isGroupShown(2)">
-            <h4><font size = "4 px" color = "black"><i class="icon ion-android-calendar"></i><b> Fecha:</b></font> <font size= "3 px">{{ selectedDetalle.fecha }}</font></h4>
+            <h4><font size = "4 px" color = "black"><i class="icon ion-android-calendar"></i><b> Fecha:</b></font> <font size= "3 px">{{selectedDetalle.fecha}}</font></h4>
             <h4><font size = "4 px" color = "black"><i class="icon ion-clock"></i><b> Hora: </b></font><font size = "3 px">{{ selectedDetalle.hora }}</font></h4>
             <h4><font size = "4 px" color = "black"><i class="icon ion-android-pin"></i><b> Lugar:</b></font> <font size = "3 px">{{ selectedDetalle.lugar}}</font></h4>
             
@@ -97,9 +97,17 @@
             </ion-item>
 
        </ion-list>
-
+       <div class = "corazon">
+      <font size = "7 px">
+      <a ng-click="liked=!liked" ng-class="{'liked':!liked, 'not-liked':liked}" >
+        <i class="icon ion-ios-heart"></i>
+       </a>
+      </font>
+      </div>
 
     </div>
+
+
     </ion-content>
   </div>
 </ion-modal-view>

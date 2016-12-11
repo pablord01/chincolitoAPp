@@ -54,21 +54,29 @@
         <ion-nav-view name="solicitud-tab"></ion-nav-view>
       </ion-tab>
 
-      <ion-tab title="Cercanos" icon-off="ion-android-pin" icon-on="ion-android-pin" ng-click="cercanos()">
+      <ion-tab title="Cercanos" icon-off="ion-android-pin" icon-on="ion-android-pin" href="#/tab/cercanos">
         <ion-nav-view name="cercanos-tab"></ion-nav-view>
       </ion-tab>
 
-      <ion-tab title="Panoramas" icon-on="ion-android-happy" icon-off="ion-android-happy" href="#/tab/ofertas">
-        <ion-nav-view name="ofertas-tab"></ion-nav-view>
+      <ion-tab title="Panoramas" icon-on="ion-android-happy" icon-off="ion-android-happy" href="#/tab/panoramas">
+        <ion-nav-view name="panoramas-tab"></ion-nav-view>
       </ion-tab>
       <ion-tab title="Inicio" icon-on="ion-ios-home" icon-off="ion-ios-home" href="#/tab/home">
         <ion-nav-view name="home-tab"></ion-nav-view>
       </ion-tab>
 
-      <ion-tab title="Ruta Panorámica" class="{{signer()}}" icon-on="ion-android-map" icon-off="ion-android-map" href="#/tab/pendientes">
-        <ion-nav-view name="pendientes-tab"></ion-nav-view>
+      <ion-tab title="Ruta" class="{{signer()}}" icon-on="ion-android-map" icon-off="ion-android-map" href="#/tab/preruta">
+        <ion-nav-view name="preruta-tab"></ion-nav-view>
       </ion-tab>
-      <ion-tab title="Guardados" icon="ion-ios-heart" ng-click="logout()"></ion-tab>
+
+      <ion-tab title="Sugerencias"  icon-on="ion-thumbsup" icon-off="ion-thumbsup" href="#/tab/sugerencias">
+        <ion-nav-view name="sugerencias-tab"></ion-nav-view>
+      </ion-tab>
+
+      <ion-tab title="Guardados" icon="ion-ios-heart" href="#/tab/ofertas">
+      <ion-nav-view name="ofertas-tab"></ion-nav-view>
+    </ion-tab>
+
     </ion-tabs>
   </ion-side-menu-content>
 </ion-side-menus>

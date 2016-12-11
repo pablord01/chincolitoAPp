@@ -17,7 +17,6 @@ angular.module('starter', ['ionic','ngCordova'])
 .config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
   $ionicConfigProvider.tabs.position('bottom');
   $ionicConfigProvider.tabs.style('striped');
-
   $stateProvider
   .state('login', {
     url: '/login',
@@ -29,11 +28,25 @@ angular.module('starter', ['ionic','ngCordova'])
     templateUrl: 'templates/prueba.html',
     controller: 'Prueba'
   })
+
+  .state('sugerencias',{
+    url: '/sugerencias',
+    templateUrl: 'templates/sugerencias.html',
+    controller: 'sugerenciasCtrl'
+  })
+  .state('prueba1',{
+    url: '/prueba1',
+    templateUrl: 'templates/prueba1.html',
+    controller: 'Prueba1'
+  })
   .state('tabs',{
     url: '/tab',
+    abstract: true,
     templateUrl: 'templates/tabs.html',
     controller: 'Tabs'
   })
+  
+
   
   .state('tabs.home', {
       url: "/home",
@@ -43,7 +56,17 @@ angular.module('starter', ['ionic','ngCordova'])
           controller: 'HomeTabCtrl'
         }
       }
+      })
+  .state('tabs.sugerencias', {
+      url: "/sugerencias",
+      views: {
+        'sugerencias-tab': {
+          templateUrl: "templates/sugerencias.html",
+          controller: 'sugerenciasCtrl'
+        }
+      }
     })
+  
   .state('tabs.ofertas', {
       url: "/ofertas",
       views: {
@@ -62,25 +85,58 @@ angular.module('starter', ['ionic','ngCordova'])
         }
       }
     })
+ 
+    .state('tabs.panoramas', {
+      url: "/panoramas",
+      views: {
+        'panoramas-tab': {
+          templateUrl: "templates/panoramas.html",
+          controller: 'panoramasCtrl'
+        }
+      }
+
+    }) 
     .state('tabs.cercanos', {
       url: "/cercanos",
       views: {
         'cercanos-tab': {
           templateUrl: "templates/cercanos.html",
-          controller: 'CercanosCtrl'
-        }
-      }
-    })
-    .state('tabs.pendientes', {
-      url: "/pendientes",
-      views: {
-        'pendientes-tab': {
-          templateUrl: "templates/pendientes.html",
-          controller: 'pendientesCtrl'
+          controller: 'RutaCtrl'
         }
       }
 
     }) 
+    .state('tabs.preruta', {
+      url: "/preruta",
+      views: {
+        'preruta-tab': {
+          templateUrl: "templates/preruta.html",
+          controller: 'prerutaCtrl'
+        }
+      }
+    })
+    .state('tabs.prueba1', {
+      url: "/prueba1",
+      views: {
+        'preruta-tab': {
+          templateUrl: "templates/prueba1.html",
+          controller: 'prerutaCtrl'
+        }
+      }
+    })
+    .state('tabs.ruta', {
+      url: "/ruta",
+      cache: true,
+      views: {
+        'preruta-tab': {
+          templateUrl: "templates/ruta.html",
+          controller: 'RutaCtrl'
+        }
+      }
+    })
+
+  
+
     .state('tabs.revisar', {
       url: "/revisar",
       views: {

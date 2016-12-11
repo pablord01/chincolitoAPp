@@ -3514,6 +3514,9 @@ ion-infinite-scroll {
 .hola{
   top: 88px;
 }  
+.chao{
+  top: 25px;
+} 
 
 .no-header {
   top: 0; }
@@ -3529,6 +3532,9 @@ ion-infinite-scroll {
 
 .has-footer {
   bottom: 70px; }
+
+  .has-footero {
+  margin-bottom: 74px; }
 
 .has-subfooter {
   bottom: 88px; }
@@ -5705,6 +5711,42 @@ ion-tabs.tabs-striped.tabs-color-active-dark .tab-item.tab-item-active, ion-tabs
  * Items
  * --------------------------------------------------
  */
+.itemo {
+  border-color: #ddd;
+  background-color: #edeaea;
+  color: #444;
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin: 0px;
+  margin-top: 0px;
+  padding: 9px;
+  border-width: 1px;
+  border-style: solid;
+  margin-bottom: -10px;
+
+  font-size: 16px; }
+  .itemo h2 {
+    margin: 0 0 2px 0;
+    font-size: 16px;
+    font-weight: normal; }
+  .itemo h3 {
+    margin: 0 0 4px 0;
+    font-size: 14px; }
+     .itemo p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 0px; }
+    .itemo h1:last-child,
+  .itemo h2:last-child,
+  .itemo h3:last-child,
+  .itemo h4:last-child,
+  .itemo h5:last-child,
+  .itemo h6:last-child,
+  .itemo p:last-child {
+    margin-bottom: 0; }
+
+
 .item {
   border-color: #ddd;
   background-color: #fff;
@@ -6333,13 +6375,16 @@ button.item.item-button-right {
   .item-avatar-left .item-content > img:first-child,
   .item-avatar-left .item-content .item-image {
     position: absolute;
-    top: 16px;
+    top: 7px;
     left: 16px;
-    max-width: 40px;
-    max-height: 40px;
+    bottom: 7px;
+    max-width: 45px;
+    max-height: 45px;
     width: 100%;
     height: 100%;
     border-radius: 50%; }
+
+
 
 .item-avatar-right,
 .item-avatar-right .item-content {
@@ -6426,6 +6471,15 @@ button.item.item-button-right {
   background-color: #f5f5f5;
   color: #222;
   font-weight: 500; }
+
+.item-cardfooter {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  min-height: 30px;
+  background-color: #e2e0e0;
+  color: #222;
+  font-weight: 500; }
+
 
 .platform-ios .item-divider-platform,
 .item-divider-ios {
@@ -6630,14 +6684,17 @@ button.item.item-button-right {
  */
 .list {
   position: relative;
+
   padding-top: 1px;
   padding-bottom: 1px;
   padding-left: 0;
   margin-bottom: 20px; }
 
 .list:last-child {
+
   margin-bottom: 0px; }
   .list:last-child.card {
+
     margin-bottom: 40px; }
 
 /**
@@ -9524,7 +9581,9 @@ a.button {
     content: "."; }
 
 .full-image {
-  width: 100%; }
+  width: 100%;
+   margin: 0 auto; 
+  }
 
 .clearfix {
   *zoom: 1; }
@@ -9962,8 +10021,10 @@ a.button {
   .bar-df .button {
     color: #fff; }
   .bar-df .bar-logo img {
+    text-align: left;
     height: 27px;
-    margin-top: 8px; }
+    margin-top: 4%;
+    }
 
 .content-bg {
   background: #F4F4F4; }
@@ -9971,6 +10032,7 @@ a.button {
 .banner-top {
   position: relative;
   height: 180px;
+  margin-top: -12px;
   margin-left: -10px;
   margin-right: -10px;
   background-position: top center;
@@ -9984,7 +10046,7 @@ a.button {
     content: '';
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 25%, rgba(255, 255, 255, 0) 54%); }
   .banner-top .titulo-banner {
-    font-size: 18px;
+    font-size: 16px;
     position: absolute;
     z-index: 51;
     bottom: 0;
@@ -10106,7 +10168,8 @@ a.button {
 
 /*Agregado por Usach*/
 .notifica-home .financia {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), inset 0 -3px 0 0 #01b236; }
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), inset 0 -3px 0 0 #01b236;
+  margin-top: -8px; }
   .notifica-home .financia:before {
     font-family: 'Ionicons';
     font-size: 49px;
@@ -10121,11 +10184,23 @@ a.button {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), inset 0 -3px 0 0 #4f9994; }
   .notifica-home .preferencias:before {
     font-family: 'Ionicons';
-    font-size: 40px;
+    font-size: 30px;
     position: absolute;
     top: 12px;
     right: 7px;
     content: '\f443';
+    color: #4f9994; }
+
+
+    .notifica-home .preferenciador {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), inset 0 -3px 0 0 #4f9994; }
+  .notifica-home .preferenciador:before {
+    font-family: 'Ionicons';
+    font-size: 56px;
+    position: absolute;
+    top: 12px;
+    right: 7px;
+    content: '\f3d1';
     color: #4f9994; }
 /**/
 
@@ -10135,34 +10210,62 @@ a.button {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), inset 0 -3px 0 0 #d1130c; }
   .notifica-home .pendientes:before {
     font-family: 'Ionicons';
-    font-size: 30px;
+    font-size: 24px;
     position: absolute;
-    top: 7px;
+    top: 5px;
     right: 5px;
-    content: '\f35a';
+    content: '\f36c';
     color: #d1130c; }
 
 .notifica-home .ofertas {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), inset 0 -3px 0 0 #4982e5; }
   .notifica-home .ofertas:before {
     font-family: 'Ionicons';
-    font-size: 30px;
+    font-size: 24px;
     position: absolute;
-    top: 10px;
-    right: 3px;
+    top: 6px;
+    right: 5px;
     content: '\f38e';
     color: #4982e5; }
 
 .notifica-home .numero {
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 300;
   display: block;
   margin-bottom: 4px;
   padding-bottom: 4px;
   border-bottom: 1px solid #C8C8C8; }
 
+  .notifica-home .numeros {
+    margin-top: 40px;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+    color: white;
+  font-size: 25px;
+  font-weight: 300;
+  display: block;
+  margin-bottom: 4px;
+  padding-bottom: 4px;
+  border-bottom: 0px solid #C8C8C8; }
+
+
+  .notifica-home .numerosguardados {
+    margin-top: 40px;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+    color: white;
+  font-size: 18px;
+  font-weight: 100;
+  display: block;
+  margin-bottom: 4px;
+  padding-bottom: 4px;
+  border-bottom: 0px solid #C8C8C8; }
+
 .notifica-home .interes {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), inset 0 -3px 0 #4f9994; }
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), inset 0 -3px 0 #4f9994;
+  margin-top: -5px; }
   .notifica-home .interes:before {
     font-family: 'Ionicons';
     font-size: 30px;
@@ -10174,16 +10277,16 @@ a.button {
 
 
   .notifica-home .numero1{
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 300;
   display: block;
   margin-bottom: -9px;
   padding-bottom: 1px;
-  margin-left: 26%;
+  margin-left: 20%;
   border-bottom: 0px solid #C8C8C8; }
 
     .notifica-home .numero2{
-  font-size: 30px;
+  font-size: 23px;
   font-weight: 300;
   display: block;
   margin-bottom: -5px;
@@ -10191,7 +10294,7 @@ a.button {
   border-bottom: 0px solid #C8C8C8; }
 
       .notifica-home .numero3{
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 300;
   display: block;
   margin-bottom: 4px;
@@ -10201,7 +10304,7 @@ a.button {
 
 
 .notifica-home .numeropanoramasnuevos {
-  font-size: 28px;
+  font-size: 18px;
   font-weight: 300;
   display: block;
   margin-bottom: 2px;
@@ -10209,21 +10312,22 @@ a.button {
   border-bottom: 1px solid #C8C8C8; }
 
 .notifica-home .lugares {
-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), inset 0 -3px 0 0 #c48321; }
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), inset 0 -3px 0 0 #c48321;
+margin-top: -5px; }
   .notifica-home .lugares:before {
     font-family: 'Ionicons';
-    font-size: 40px;
+    font-size: 28px;
     position: absolute;
-    top: 9px;
-    right: 5px;
+    top: 6px;
+    right: 7px;
     content: '\f1ff';
     color: #c48321; }
 
 .notifica-home .numerolugares {
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 300;
   display: block;
-  margin-bottom: 2px;
+  margin-bottom: 1px;
   padding-bottom: 4px;
   border-bottom: 1px solid #C8C8C8; }
 
@@ -10233,10 +10337,10 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), inset 0 -3px 0 0 #c48321; }
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), inset 0 -3px 0 0 #96157a; }
   .notifica-home .recomendacion:before {
     font-family: 'Ionicons';
-    font-size: 33px;
+    font-size: 26px;
     position: absolute;
     top: 7px;
-    right: 3px;
+    right: 5px;
     content: '\f251';
     color: #96157a; }
 
@@ -10259,6 +10363,7 @@ agregado boton "solicitar financiamiento fijo"
   position: absolute;
   bottom: 0px;  
   width: 92%;  
+  margin-bottom: 50px;
   }
 
 
@@ -10274,8 +10379,8 @@ margin-top: -17px !important;
 .ion-nifty-modal {
   width: 90%;
   min-height: 0 !important;
-  height: 85%;
-  top: 8%;
+  height: 87%;
+  top: 5%;
   left: 5%;
   right: 5%;
   bottom: 5%;
@@ -10579,6 +10684,14 @@ border: 1px groove;
     background-image:   linear-gradient(to bottom, rgba(0,0,0,0.99) 0%, rgba(138,138,138,0.99) 0%, rgba(8,8,8,0.99) 0%, rgba(8,8,8,1) 21%, rgba(8,8,8,1) 47%, rgba(53,52,53,1) 52%, rgba(135,132,135,1) 61%, rgba(189,185,189,1) 75%, rgba(190,186,190,1) 76%, rgba(199,191,199,1) 83%, rgba(255,255,255,1) 100%);
      }
 
+.fondopreruta{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 10px;
+  background: url(../img/a.png) no-repeat top center;*/
+  background-size: cover; }
+
 
 
 
@@ -10644,7 +10757,7 @@ border: 1px groove;
 }
 
 .perfect{
-  font-size: 20px;
+  font-size: 17px;
   font-style: 
   text-align: center;
 
@@ -10673,4 +10786,43 @@ border: 1px groove;
 }
 .bb{
   padding-top: 2px; 
+}
+
+.abc{
+  margin-top: 20px;
+  margin-bottom: 6%;
+
+}
+.abcd{
+  margin-top: 10px;
+}
+
+
+.tamano{
+  width: 20%;
+  margin: 0 auto;
+}
+.tamano img{
+  width: 100%
+}
+
+.corazon{
+  padding-top: 10px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.liked{
+  color:#bae0dd;
+}
+
+.liked:active, .liked:hover{
+  color:#bae0dd;
+}
+
+.not-liked{
+  color:#4f9994;
+}
+.not-liked:active, .not-liked:hover{
+  color:#4f9994;
 }
