@@ -68,6 +68,19 @@
             
           </ion-item>
             <!--DURACION -->
+            <ion-item class="item-darko"
+                    ng-click="toggleGroup(4)"
+                    ng-class="{active: isGroupShown(4)}">
+              <i class="icon" ng-class="isGroupShown(4) ? 'ion-minus' : 'ion-plus'"></i>
+            &nbsp;
+            Duración
+          </ion-item>
+          <ion-item class="item-accordo"
+                    ng-repeat="item in [1]"
+                    ng-show="isGroupShown(4)">
+
+            <h4><font size = "4 px" color = "black"><i class="icon ion-clock"></i><b> </b></font><font size = "4 px">{{ selectedDuracion }}</font></h4>
+            </ion-item>
             <!-- -->
             <ion-item class="item-darko"
                     ng-click="toggleGroup(5)"

@@ -57,14 +57,12 @@ angular.module('starter')
   $scope.Filters = [
 { "title": "Gastronomía",
 "filters" : [
-{"name": "Rope", "checked": false},
-{"name": "Cables", "checked": false},
-{"name": "Step Box", "checked": false},
-{"name": "Barbell", "checked": false},
-{"name": "Dumbbell", "checked": false},
-{"name": "Gym Ball", "checked": false},
-{"name": "Foam Roller", "checked": false},
-{"name": "Kettlebell", "checked": false}
+{"name": "Restaurantes", "checked": false},
+{"name": "Comida al paso", "checked": false},
+{"name": "Food Truck", "checked": false},
+{"name": "Cafeterias", "checked": false},
+{"name": "Servicio Buffet", "checked": false},
+{"name": "Comida rápida", "checked": false}
 ]},
 {
 "title": "Deporte",
@@ -80,37 +78,13 @@ angular.module('starter')
 {
 "title": "Cultura",
 "filters" : [
-{"name": "Fútbol", "checked": false},
-{"name": "Tenis", "checked": false},
-{"name": "Basquetbol", "checked": false},
-{"name": "Handball", "checked": false},
-{"name": "Ping Pong", "checked": false},
-{"name": "Natación", "checked": false},
-{"name": "Rugby", "checked": false},
+{"name": "Museos", "checked": false},
+{"name": "Ferias costumbristas", "checked": false},
+{"name": "Teatro", "checked": false},
+{"name": "Danza", "checked": false},
+{"name": "Artes plásticas", "checked": false},
+{"name": "Fotografía", "checked": false}
 ]},
-{
-"title": "Social",
-"filters" : [
-{"name": "Fútbol", "checked": false},
-{"name": "Tenis", "checked": false},
-{"name": "Basquetbol", "checked": false},
-{"name": "Handball", "checked": false},
-{"name": "Ping Pong", "checked": false},
-{"name": "Natación", "checked": false},
-{"name": "Rugby", "checked": false},
-]},
-{
-"title": "Espectáculos",
-"filters" : [
-{"name": "Fútbol", "checked": false},
-{"name": "Tenis", "checked": false},
-{"name": "Basquetbol", "checked": false},
-{"name": "Handball", "checked": false},
-{"name": "Ping Pong", "checked": false},
-{"name": "Natación", "checked": false},
-{"name": "Rugby", "checked": false},
-]},
-
 {
 "title": "Cine",
 "filters" : [
@@ -118,6 +92,7 @@ angular.module('starter')
 {"name": "Acción", "checked": false},
 {"name": "Drama", "checked": false},
 {"name": "Comedia", "checked": false},
+{"name": "Sicológico", "checked": false},
 {"name": "Ciencia Ficción", "checked": false},
 {"name": "Infantil", "checked": false},
 {"name": "Parodia", "checked": false},
@@ -126,26 +101,18 @@ angular.module('starter')
 {
 "title": "Música ",
 "filters" : [
-{"name": "Foot & Shin", "checked": false},
-{"name": "Calf", "checked": false},
-{"name": "Quads", "checked": false},
-{"name": "Neck", "checked": false},
-{"name": "Triceps", "checked": false},
-{"name": "Biceps", "checked": false},
-{"name": "Wrist & Hand", "checked": false}
+{"name": "Conciertos", "checked": false},
+{"name": "Presentación al aire libre", "checked": false},
+{"name": "Festivales", "checked": false},
+{"name": "Micrófono abierto", "checked": false}
 ]},
 
 {
 "title": "Arte",
 "filters" : [
-{"name": "Foot and Ankle", "checked": false},
-{"name": "Knee", "checked": false},
-{"name": "Hip & Pelvis", "checked": false},
-{"name": "Lumbar ", "checked": false},
-{"name": "Thoracic Region", "checked": false},
-{"name": "Cervical", "checked": false},
-{"name": "Shoulder", "checked": false},
-{"name": "Elbow, Wrist & Hand", "checked": false}
+{"name": "Talleres gratuitos", "checked": false},
+{"name": "Exposiciones de arte", "checked": false},
+{"name": "Charlas y conversatorios", "checked": false}
 ]}
 ] 
 
@@ -187,14 +154,12 @@ angular.module('starter')
   $scope.Filters = [
 { "title": "Gastronomía",
 "filters" : [
-{"name": "Rope", "checked": false},
-{"name": "Cables", "checked": false},
-{"name": "Step Box", "checked": false},
-{"name": "Barbell", "checked": false},
-{"name": "Dumbbell", "checked": false},
-{"name": "Gym Ball", "checked": false},
-{"name": "Foam Roller", "checked": false},
-{"name": "Kettlebell", "checked": false}
+{"name": "Restaurantes", "checked": false},
+{"name": "Comida al paso", "checked": false},
+{"name": "Food Truck", "checked": false},
+{"name": "Cafeterias", "checked": false},
+{"name": "Servicio Buffet", "checked": false},
+{"name": "Comida rápida", "checked": false}
 ]},
 {
 "title": "Deporte",
@@ -210,37 +175,13 @@ angular.module('starter')
 {
 "title": "Cultura",
 "filters" : [
-{"name": "Fútbol", "checked": false},
-{"name": "Tenis", "checked": false},
-{"name": "Basquetbol", "checked": false},
-{"name": "Handball", "checked": false},
-{"name": "Ping Pong", "checked": false},
-{"name": "Natación", "checked": false},
-{"name": "Rugby", "checked": false},
+{"name": "Museos", "checked": false},
+{"name": "Ferias costumbristas", "checked": false},
+{"name": "Teatro", "checked": false},
+{"name": "Danza", "checked": false},
+{"name": "Artes plásticas", "checked": false},
+{"name": "Fotografía", "checked": false}
 ]},
-{
-"title": "Social",
-"filters" : [
-{"name": "Fútbol", "checked": false},
-{"name": "Tenis", "checked": false},
-{"name": "Basquetbol", "checked": false},
-{"name": "Handball", "checked": false},
-{"name": "Ping Pong", "checked": false},
-{"name": "Natación", "checked": false},
-{"name": "Rugby", "checked": false},
-]},
-{
-"title": "Espectáculos",
-"filters" : [
-{"name": "Fútbol", "checked": false},
-{"name": "Tenis", "checked": false},
-{"name": "Basquetbol", "checked": false},
-{"name": "Handball", "checked": false},
-{"name": "Ping Pong", "checked": false},
-{"name": "Natación", "checked": false},
-{"name": "Rugby", "checked": false},
-]},
-
 {
 "title": "Cine",
 "filters" : [
@@ -248,6 +189,7 @@ angular.module('starter')
 {"name": "Acción", "checked": false},
 {"name": "Drama", "checked": false},
 {"name": "Comedia", "checked": false},
+{"name": "Sicológico", "checked": false},
 {"name": "Ciencia Ficción", "checked": false},
 {"name": "Infantil", "checked": false},
 {"name": "Parodia", "checked": false},
@@ -256,26 +198,18 @@ angular.module('starter')
 {
 "title": "Música ",
 "filters" : [
-{"name": "Foot & Shin", "checked": false},
-{"name": "Calf", "checked": false},
-{"name": "Quads", "checked": false},
-{"name": "Neck", "checked": false},
-{"name": "Triceps", "checked": false},
-{"name": "Biceps", "checked": false},
-{"name": "Wrist & Hand", "checked": false}
+{"name": "Conciertos", "checked": false},
+{"name": "Presentación al aire libre", "checked": false},
+{"name": "Festivales", "checked": false},
+{"name": "Micrófono abierto", "checked": false}
 ]},
 
 {
 "title": "Arte",
 "filters" : [
-{"name": "Foot and Ankle", "checked": false},
-{"name": "Knee", "checked": false},
-{"name": "Hip & Pelvis", "checked": false},
-{"name": "Lumbar ", "checked": false},
-{"name": "Thoracic Region", "checked": false},
-{"name": "Cervical", "checked": false},
-{"name": "Shoulder", "checked": false},
-{"name": "Elbow, Wrist & Hand", "checked": false}
+{"name": "Talleres gratuitos", "checked": false},
+{"name": "Exposiciones de arte", "checked": false},
+{"name": "Charlas y conversatorios", "checked": false}
 ]}
 ] 
 
@@ -353,14 +287,12 @@ $scope.groups = [];
   $scope.Filters = [
 { "title": "Gastronomía",
 "filters" : [
-{"name": "Rope", "checked": false},
-{"name": "Cables", "checked": false},
-{"name": "Step Box", "checked": false},
-{"name": "Barbell", "checked": false},
-{"name": "Dumbbell", "checked": false},
-{"name": "Gym Ball", "checked": false},
-{"name": "Foam Roller", "checked": false},
-{"name": "Kettlebell", "checked": false}
+{"name": "Restaurantes", "checked": false},
+{"name": "Comida al paso", "checked": false},
+{"name": "Food Truck", "checked": false},
+{"name": "Cafeterias", "checked": false},
+{"name": "Servicio Buffet", "checked": false},
+{"name": "Comida rápida", "checked": false}
 ]},
 {
 "title": "Deporte",
@@ -376,37 +308,13 @@ $scope.groups = [];
 {
 "title": "Cultura",
 "filters" : [
-{"name": "Fútbol", "checked": false},
-{"name": "Tenis", "checked": false},
-{"name": "Basquetbol", "checked": false},
-{"name": "Handball", "checked": false},
-{"name": "Ping Pong", "checked": false},
-{"name": "Natación", "checked": false},
-{"name": "Rugby", "checked": false},
+{"name": "Museos", "checked": false},
+{"name": "Ferias costumbristas", "checked": false},
+{"name": "Teatro", "checked": false},
+{"name": "Danza", "checked": false},
+{"name": "Artes plásticas", "checked": false},
+{"name": "Fotografía", "checked": false}
 ]},
-{
-"title": "Social",
-"filters" : [
-{"name": "Fútbol", "checked": false},
-{"name": "Tenis", "checked": false},
-{"name": "Basquetbol", "checked": false},
-{"name": "Handball", "checked": false},
-{"name": "Ping Pong", "checked": false},
-{"name": "Natación", "checked": false},
-{"name": "Rugby", "checked": false},
-]},
-{
-"title": "Espectáculos",
-"filters" : [
-{"name": "Fútbol", "checked": false},
-{"name": "Tenis", "checked": false},
-{"name": "Basquetbol", "checked": false},
-{"name": "Handball", "checked": false},
-{"name": "Ping Pong", "checked": false},
-{"name": "Natación", "checked": false},
-{"name": "Rugby", "checked": false},
-]},
-
 {
 "title": "Cine",
 "filters" : [
@@ -414,6 +322,7 @@ $scope.groups = [];
 {"name": "Acción", "checked": false},
 {"name": "Drama", "checked": false},
 {"name": "Comedia", "checked": false},
+{"name": "Sicológico", "checked": false},
 {"name": "Ciencia Ficción", "checked": false},
 {"name": "Infantil", "checked": false},
 {"name": "Parodia", "checked": false},
@@ -422,26 +331,18 @@ $scope.groups = [];
 {
 "title": "Música ",
 "filters" : [
-{"name": "Foot & Shin", "checked": false},
-{"name": "Calf", "checked": false},
-{"name": "Quads", "checked": false},
-{"name": "Neck", "checked": false},
-{"name": "Triceps", "checked": false},
-{"name": "Biceps", "checked": false},
-{"name": "Wrist & Hand", "checked": false}
+{"name": "Conciertos", "checked": false},
+{"name": "Presentación al aire libre", "checked": false},
+{"name": "Festivales", "checked": false},
+{"name": "Micrófono abierto", "checked": false}
 ]},
 
 {
 "title": "Arte",
 "filters" : [
-{"name": "Foot and Ankle", "checked": false},
-{"name": "Knee", "checked": false},
-{"name": "Hip & Pelvis", "checked": false},
-{"name": "Lumbar ", "checked": false},
-{"name": "Thoracic Region", "checked": false},
-{"name": "Cervical", "checked": false},
-{"name": "Shoulder", "checked": false},
-{"name": "Elbow, Wrist & Hand", "checked": false}
+{"name": "Talleres gratuitos", "checked": false},
+{"name": "Exposiciones de arte", "checked": false},
+{"name": "Charlas y conversatorios", "checked": false}
 ]}
 ] 
 
@@ -935,10 +836,11 @@ $ionicModal.fromTemplateUrl('templates/modal.html',function($ionicModal) {
         name : 'El principito',
         image: 'img/principito.jpg  ',
         date: '12/12/16 al 21/12/16',
-        hour: '19:00 a 20:30 hrs',
+        hour: '14:00 a 15:20 hrs',
         place : 'Centro de Eventos Matucana 100',
         price: '$5.000 Adultos \n $2.500 Niños',
         category: 'Cultura, Teatro',
+        duracion: '1 hora 20 minutos',
         description: 'Novela clásica escrita por Antoine de Saint-Exupéry llevada al teatro dirigida a toda la familia',
         lat : -33.44471866212755,
         long : -70.67959785461426
@@ -952,6 +854,7 @@ $ionicModal.fromTemplateUrl('templates/modal.html',function($ionicModal) {
         place : 'Museo Interactivo Artequin',
         price: 'Entrada Liberada',
         category: 'Museo de Ciencia',
+        duracion: '40 minutos',
         description: 'Actividad para toda la familia, en que los niños pueden crear sus propios adornos navideños',
         lat : -33.44455751997385,
         long : -70.68420052528381 
@@ -965,6 +868,7 @@ $ionicModal.fromTemplateUrl('templates/modal.html',function($ionicModal) {
         place : 'Museo de Ciencias y tecnología',
         price: 'Aporte voluntario desde $300',
         category: 'Museo de Ciencia',
+        duracion: '1 hora',
         description: 'El universo se toma el museo para acercarnos a galaxias lejanas con juegos de luces y proyecciones en vivo',
         lat : -33.44004541814073,
         long : -70.68369626998901 
@@ -978,6 +882,7 @@ $ionicModal.fromTemplateUrl('templates/modal.html',function($ionicModal) {
         place : 'Museo de la Memoria y los Derechos Humanos',
         price: 'Entrada Liberada',
         category: 'Exposición histórica',
+        duracion: '50 minutos',
         description: 'Galeria de fotografías inéditas tomadas en dictadura por fotografos aficionados',
         lat : -33.440009606870085,
         long : -70.67945301532745 
@@ -991,6 +896,7 @@ $ionicModal.fromTemplateUrl('templates/modal.html',function($ionicModal) {
         place : 'Plaza Yungay',
         price: 'Entrada Liberada',
         category: 'Feria cultural',
+        duracion: '1 hora 15 minutos',
         description: 'Los mejores exponentes de Santiago se reunen en uno de los lugares íconos de la comuna a presentar sus mejores recetas y degustar a la gente con una tarde entretenida en familia',
         lat : -33.437440109624404,
         long : -70.67399740219116 
@@ -1023,6 +929,8 @@ $ionicModal.fromTemplateUrl('templates/modal.html',function($ionicModal) {
                 animation: google.maps.Animation.DROP,
                 title: $scope.places[0].name
             });
+            infoWindow.setContent('Punto de Inicio');
+            infoWindow.open($scope.map,marker);
             google.maps.event.addListener(marker, 'click', function(){
                 infoWindow.setContent('Punto de Inicio');
                 infoWindow.open($scope.map, marker);
@@ -1038,7 +946,7 @@ $ionicModal.fromTemplateUrl('templates/modal.html',function($ionicModal) {
                 animation: google.maps.Animation.DROP,
                 title: info.name
             });
-            var aux = '<a ng-click="openModal1('+index+')">Detalles</a>';
+            var aux = '<a ng-click="openModal1('+index+')">'+info.name+'</a>';
             var information = $compile(aux)($scope);
             google.maps.event.addListener(marker, 'click', function(){
                 infoWindow.setContent(information[0]);
@@ -1099,6 +1007,7 @@ $ionicModal.fromTemplateUrl('templates/modal.html',function($ionicModal) {
       $scope.selectedLugar = $scope.places[index].place;
       $scope.selectedPrice = $scope.places[index].price;
       $scope.selectedCategory = $scope.places[index].category;
+      $scope.selectedDuracion = $scope.places[index].duracion;
       $scope.modal.show();
     }
     $scope.closeModal1 = function() {      
