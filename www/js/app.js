@@ -173,7 +173,7 @@ angular.module('starter', ['ionic','ngCordova'])
   
   $urlRouterProvider.otherwise(function ($injector, $location) {
     var $state = $injector.get("$state");
-    $state.go('tabs.home', {}, {reload: true});
+    $state.go('login', {}, {reload: true});
   });
 })
 .controller('NavCtrl', function($scope, $ionicSideMenuDelegate) {

@@ -3799,7 +3799,7 @@ a.subdued {
   padding: 16px;
   color: #8f8f8f;
   text-align: center;
-  font-size: 13px; }
+  font-size: 19px; }
 
 .action-sheet-group {
   margin-bottom: 8px;
@@ -9972,7 +9972,7 @@ a.button {
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding-top: 40px;
+  padding-top: 20px;
   background: url(../img/login-bg.png) no-repeat top center;*/
   background-size: cover; }
   .login-container:before {
@@ -9982,7 +9982,7 @@ a.button {
     width: 100%;
     height: 100%;
     content: '';
-    opacity: .8;
+    opacity: .7;
     background-image: linear-gradient(149deg, #3ee2c1 0%, #007388 100%); }
   .login-container .logo-defontana {
     position: relative;
@@ -9994,7 +9994,7 @@ a.button {
     .login-container .logo-defontana img {
       height: 65px; }
   .login-container .login-form {
-    top: 35px;
+    top: 20px;
     position: relative; }
     .login-container .login-form .button {
       font-weight: 600; }
@@ -10379,7 +10379,7 @@ margin-top: -17px !important;
 .ion-nifty-modal {
   width: 90%;
   min-height: 0 !important;
-  height: 87%;
+  height: 90%;
   top: 5%;
   left: 5%;
   right: 5%;
@@ -10807,7 +10807,7 @@ border: 1px groove;
 }
 
 .corazon{
-  padding-top: 10px;
+  padding-top: 7px;
   text-align: center;
   margin: 0 auto;
 }
@@ -10826,3 +10826,4 @@ border: 1px groove;
 .not-liked:active, .not-liked:hover{
   color:#4f9994;
 }
+
